@@ -79,4 +79,6 @@ git push -u origin main
 
 :end
 echo Done.
+echo.
+pause
 endlocal
