@@ -1,0 +1,48 @@
+{
+  "mcpServers": {
+    "chrome-devtools-mcp": {
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "command": "npx"
+    },
+    "easy-jupyter-editor": {
+      "args": [
+        "--refresh",
+        "--with",
+        "mcp[cli]\u003c2",
+        "easy-jupyter-editor-mcp"
+      ],
+      "command": "uvx"
+    },
+    "parallel-search": {
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://search.parallel.ai/mcp"
+      ],
+      "command": "npx"
+    },
+    "sequential-thinking": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "command": "npx"
+    },
+    "graphify": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "graphifyy",
+        "--with",
+        "mcp",
+        "-m",
+        "graphify.serve",
+        "${workspace.path}/graphify-out/graph.json"
+      ]
+    }
+  }
+}
